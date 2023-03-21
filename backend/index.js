@@ -1,16 +1,17 @@
 const express = require('express');
+const authRoutes = require('./routes/auth');
 const PORT = 3000;
 const server = express();
 
 
-server.get('/', (req, res) => {
-    res.end("Hello World!");
-    console.log(req.method, req.path);
-});
+server.use(express.json());
+server.use(express.urlencoded({ extended: false }));
 
-server.get('/api', (req, res) => {
-    res.end("API accessed!");
-    console.log(req.method, req.path);
+//Routes
+server.use('/', authRoutes);
+
+server.all('*', (req, res) => {
+    res.status(404).send("Route not found");
 });
 
 server.listen(PORT, () => {
