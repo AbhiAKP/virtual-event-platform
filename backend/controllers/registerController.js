@@ -9,7 +9,7 @@ const registerUser = (req, res) => {
   }
   
   // CHECK IF USER EXISTS
-  const qry = "SELECT * FROM users WHERE username = ? OR email = ?";
+  const qry = "SELECT * FROM users WHERE username = ? OR email = ?;";
 
   // Check if username/email already exists
   db.query(qry, [req.body.username, req.body.email], (err, data) => {
@@ -24,7 +24,7 @@ const registerUser = (req, res) => {
     // CREATE A NEW USER IF USER DOESN'T EXISTS
     try {
       const hashedPassword = bcrypt.hashSync(req.body.password, 10);
-      const qry = "INSERT INTO users (`email`, `password`, `name`, `username`) VALUE (?)";
+      const qry = "INSERT INTO users (`email`, `password`, `name`, `username`) VALUE (?);";
       const values = [
         req.body.email,
         hashedPassword,
