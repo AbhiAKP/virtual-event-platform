@@ -45,8 +45,5 @@ const registerUser = (req, res) => {
   });
 };
 
-// const logoutUser = {
-//   //TODO
-// };
 
 module.exports = registerUser;
