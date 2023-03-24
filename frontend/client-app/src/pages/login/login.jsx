@@ -4,8 +4,8 @@ import { Link } from "react-router-dom";
 const Login = () => {
   return (
     <div className="login">
-      <div className="card">
-        <div className="left">
+      <div className="card_login">
+        <div className="left_login">
           <h1>StreamLearnr VirtualCampus</h1>
           <p>
             StreamLearnr provides you a platform to host virtual bootcamps and
@@ -17,7 +17,7 @@ const Login = () => {
             <button className="button_register">Register</button>
           </Link>
         </div>
-        <div className="right">
+        <div className="right_login">
           <h1 className="h1_login">Login</h1>
           <form action="">
             <input type="text" placeholder="Username  OR  Email" />

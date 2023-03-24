@@ -4,16 +4,15 @@ body {
     font-family: cursive;
  }
 
-.login {
+.register {
     height: 100vh;
-    /* background: radial-gradient( rgba(194, 86, 226, 0.5), rgba(181, 179, 13, 0.55)); */
-    background-color: rgb(171, 212, 255);
+    background: linear-gradient(to right, rgba(92, 182, 250, 0.75),  rgba(219, 239, 255, 0.827));
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.card{
+.card_register {
     width: 50%;
     display: flex;
     flex-direction: row-reverse;
@@ -23,7 +22,7 @@ body {
     overflow: hidden;
 }
 
-.left {
+.left_register {
     flex: 1;
     display: flex;
     flex-direction: column;
@@ -59,7 +58,7 @@ span {
     cursor: pointer;
 }
 
-.right {
+.right_register {
     flex: 1;
     display: flex;
     flex-direction: column;
@@ -74,10 +73,10 @@ span {
     margin-bottom: 30px;
 }
 
-form {
+.form_register {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 15px;
 }
 
 input {
