@@ -1,0 +1,305 @@
+@keyframes shadow-inset-center {
+  0% {
+    box-shadow: inset 0 0 0 0 transparent;
+  }
+  to {
+    box-shadow: inset 0 0 14px 0 rgb(0 0 0/50%);
+  }
+}
+.learnr {
+  color: var(--gray-white);
+}
+.textLogo {
+  position: absolute;
+  top: 22px;
+  left: 143px;
+  font-size: var(--font-size-29xl);
+  line-height: 40px;
+  font-weight: 700;
+  font-family: var(--font-pt-serif);
+  text-align: center;
+  color: var(--secondary-500);
+}
+.contactUs,
+.mobile {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  flex-shrink: 0;
+}
+.contactUs {
+  font-size: var(--header-heading-4-size);
+  line-height: 32px;
+  font-weight: 600;
+  color: var(--gray-white);
+  width: 128px;
+  height: 33px;
+}
+.mobile {
+  line-height: 24px;
+  width: 141px;
+  height: 25px;
+}
+.albertColonyAlpine {
+  margin: 0;
+}
+.addressTxt {
+  line-break: anywhere;
+  width: 100%;
+}
+.address,
+.email {
+  position: relative;
+  line-height: 24px;
+  display: flex;
+  align-items: flex-end;
+  width: 316px;
+  height: 49px;
+  flex-shrink: 0;
+}
+.email {
+  width: 249px;
+  height: 25px;
+}
+.contactSection {
+  position: absolute;
+  top: 90px;
+  left: 143px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-mini);
+  font-size: var(--body-regular-600-size);
+  color: var(--gray-50);
+}
+.about,
+.blog,
+.contact,
+.course,
+.explore,
+.home {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  flex-shrink: 0;
+}
+.explore {
+  line-height: 32px;
+  font-weight: 600;
+  width: 103px;
+  height: 34px;
+}
+.about,
+.blog,
+.contact,
+.course,
+.home {
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  background-color: transparent;
+  font-size: var(--body-regular-600-size);
+  line-height: 24px;
+  font-family: var(--body-regular-600);
+  color: var(--gray-100);
+  text-align: left;
+}
+.home {
+  width: 51px;
+  height: 26px;
+}
+.about:hover,
+.blog:hover,
+.business:hover,
+.contact:hover,
+.course:hover,
+.design:hover,
+.development:hover,
+.home:hover,
+.lifestyle:hover,
+.marketing:hover {
+  color: var(--color-khaki);
+}
+.about {
+  width: 54px;
+  height: 25px;
+}
+.course {
+  width: 62px;
+  height: 26px;
+}
+.blog,
+.contact {
+  width: 41px;
+  height: 25px;
+}
+.contact {
+  width: 68px;
+}
+.exploreSection {
+  position: absolute;
+  top: 90px;
+  left: 561px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-mini);
+}
+.business,
+.category,
+.design,
+.development,
+.lifestyle,
+.marketing {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  flex-shrink: 0;
+}
+.category {
+  line-height: 32px;
+  font-weight: 600;
+  width: 105px;
+  height: 33px;
+}
+.business {
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  background-color: transparent;
+  font-size: var(--body-regular-600-size);
+  line-height: 24px;
+  font-family: var(--body-regular-600);
+  color: var(--gray-100);
+  text-align: left;
+  height: 25px;
+}
+.design {
+  width: 52px;
+}
+.design,
+.development,
+.lifestyle,
+.marketing {
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  background-color: transparent;
+  font-size: var(--body-regular-600-size);
+  line-height: 24px;
+  font-family: var(--body-regular-600);
+  color: var(--gray-100);
+  text-align: left;
+  height: 25px;
+}
+.development {
+  width: 98px;
+}
+.marketing {
+  width: 77px;
+}
+.business {
+  width: 67px;
+}
+.lifestyle {
+  width: 66px;
+}
+.categorySection {
+  position: absolute;
+  top: 90px;
+  left: 763px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-mini);
+}
+.subscribe,
+.subscribeText {
+  position: relative;
+  line-height: 24px;
+  display: flex;
+  align-items: flex-end;
+  flex-shrink: 0;
+}
+.subscribe {
+  font-weight: 600;
+  width: 96px;
+  height: 25px;
+}
+.subscribeText {
+  font-size: var(--body-regular-600-size);
+  color: var(--gray-100);
+  width: 297px;
+  height: 49px;
+}
+.buttonText,
+.inputField {
+  font-size: var(--body-regular-600-size);
+  font-family: var(--body-regular-600);
+}
+.inputField {
+  border: 1px solid var(--gray-white);
+  background-color: var(--gray-white);
+  border-radius: var(--br-5xs);
+  box-sizing: border-box;
+  height: 57px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: row;
+  padding: var(--padding-base);
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.buttonText {
+  position: relative;
+  line-height: 24px;
+  font-weight: 600;
+  color: var(--gray-white);
+  text-align: center;
+}
+.subscribeButton {
+  cursor: pointer;
+  border: 0;
+  padding: var(--padding-xs) var(--padding-5xl);
+  background-color: transparent;
+  border-radius: var(--br-81xl);
+  background: linear-gradient(180deg, #ffc27a, #ffa337);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.subscribeButton:hover {
+  mix-blend-mode: difference;
+  background: linear-gradient(#ffb35d, #ffb35d),
+    linear-gradient(180deg, #ffc27a, #ffa337);
+  box-shadow: 2px 2px 2px rgba(227, 227, 227, 0.25);
+  animation: 1s ease 0s infinite normal none shadow-inset-center;
+  opacity: 1;
+}
+.subscribeSection {
+  position: absolute;
+  top: 90px;
+  left: 984px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-mini);
+  font-size: var(--body-large-400-size);
+}
+.footer {
+  position: relative;
+  background-color: var(--color-gray-100);
+  width: 1440px;
+  height: 433px;
+  flex-shrink: 0;
+  overflow: hidden;
+  text-align: left;
+  font-size: var(--header-heading-4-size);
+  color: var(--gray-white);
+  font-family: var(--body-regular-600);
+}

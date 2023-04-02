@@ -1,0 +1,24 @@
+.span {
+  font-size: var(--font-size-37xl);
+}
+.popularCategory {
+  color: var(--color-mediumslateblue);
+}
+.popularCategoryHeadingContainer {
+  position: relative;
+  line-height: 72px;
+  font-weight: 600;
+}
+.popularyCategories {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  padding: var(--padding-60xl) var(--padding-81xl);
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-17xl);
+  text-align: left;
+  font-size: var(--font-size-29xl);
+  color: var(--color-gray-200);
+  font-family: var(--body-regular-600);
+}

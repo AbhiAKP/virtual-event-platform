@@ -1,0 +1,95 @@
+.courseImgIcon {
+  position: relative;
+  border-radius: var(--br-xs);
+  width: 217px;
+  height: 153px;
+  flex-shrink: 0;
+  object-fit: cover;
+}
+.courseDescription,
+.courseName {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+}
+.courseName {
+  line-height: 28px;
+  font-weight: 600;
+}
+.courseDescription {
+  font-size: var(--font-size-xs);
+  line-height: 14.5px;
+  font-weight: 300;
+}
+.free {
+  position: relative;
+  line-height: 32px;
+  font-weight: 600;
+}
+.cost {
+  background-color: var(--color-royalblue-200);
+  width: 38px;
+  height: 18px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: row;
+  padding: 0 var(--padding-mini);
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: center;
+}
+.arrowuprightIcon {
+  position: relative;
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+}
+.costParent,
+.search {
+  display: flex;
+  flex-direction: row;
+}
+.search {
+  cursor: pointer;
+  border: 0;
+  padding: var(--padding-3xs);
+  background-color: transparent;
+  border-radius: var(--br-981xl);
+  background: linear-gradient(180deg, #ffc27a, #ffa337);
+  box-shadow: -4px 4px 20px rgba(32, 180, 134, 0.12);
+  align-items: center;
+  justify-content: center;
+}
+.search:hover {
+  mix-blend-mode: darken;
+  background: linear-gradient(#ffc35c, #ffc35c),
+    linear-gradient(180deg, #ffc27a, #ffa337);
+}
+.costParent {
+  border-top: 2px solid var(--color-silver);
+  padding: var(--padding-9xs) 0 var(--padding-8xs);
+  align-items: flex-end;
+  justify-content: flex-start;
+  gap: var(--gap-116xl);
+  text-align: center;
+  font-size: var(--font-size-3xs);
+  color: var(--gray-white);
+}
+.course {
+  border-radius: var(--br-xs);
+  background-color: var(--color-whitesmoke-100);
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  width: 245.26px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  padding: var(--padding-sm) var(--padding-5xs);
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: center;
+  gap: var(--gap-5xs);
+  text-align: left;
+  font-size: var(--body-large-400-size);
+  color: var(--gray-700);
+  font-family: var(--body-regular-600);
+}

@@ -1,0 +1,21 @@
+.instructors {
+  color: var(--color-mediumslateblue);
+}
+.bestInstructorsHeadingContainer {
+  position: absolute;
+  top: 89px;
+  left: 100px;
+  line-height: 72px;
+  font-weight: 600;
+}
+.bestInstructors {
+  position: relative;
+  width: 1440px;
+  height: 685px;
+  flex-shrink: 0;
+  overflow: hidden;
+  text-align: left;
+  font-size: var(--font-size-29xl);
+  color: var(--color-gray-200);
+  font-family: var(--body-regular-600);
+}

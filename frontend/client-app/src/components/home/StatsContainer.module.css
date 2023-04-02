@@ -1,0 +1,22 @@
+.statSection,
+.stats {
+  width: 1232px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.stats {
+  width: 1440px;
+  height: 157px;
+  flex-shrink: 0;
+  overflow: hidden;
+  flex-direction: column;
+  padding: var(--padding-16xl) var(--padding-81xl) var(--padding-4xl);
+  box-sizing: border-box;
+  justify-content: flex-start;
+  text-align: left;
+  font-size: var(--header-heading-3-size);
+  color: var(--primary-900);
+  font-family: var(--body-regular-600);
+}

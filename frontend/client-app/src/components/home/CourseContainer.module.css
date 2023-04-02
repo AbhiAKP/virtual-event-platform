@@ -1,0 +1,35 @@
+.span {
+  font-size: var(--font-size-37xl);
+}
+.popularCourse {
+  color: var(--color-mediumslateblue);
+}
+.popularCourseHeadingContainer {
+  position: relative;
+  line-height: 72px;
+  font-weight: 600;
+}
+.courseSection,
+.popularCourses {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-67xl);
+  font-size: var(--body-large-400-size);
+  color: var(--gray-700);
+}
+.popularCourses {
+  width: 1440px;
+  height: 554px;
+  flex-shrink: 0;
+  overflow: hidden;
+  flex-direction: column;
+  padding: var(--padding-65xl) var(--padding-81xl) var(--padding-31xl);
+  box-sizing: border-box;
+  gap: var(--gap-19xl);
+  text-align: left;
+  font-size: var(--font-size-29xl);
+  color: var(--color-gray-200);
+  font-family: var(--body-regular-600);
+}
