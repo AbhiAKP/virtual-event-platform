@@ -1,0 +1,103 @@
+.courseImgIcon {
+  position: relative;
+  border-radius: var(--br-3xs);
+  width: 314px;
+  height: 190px;
+  flex-shrink: 0;
+  object-fit: cover;
+}
+.courseName {
+  text-decoration: underline;
+  position: relative;
+  line-height: 28px;
+  font-weight: 600;
+  color: inherit;
+}
+.courseName:hover {
+  color: var(--color-steelblue);
+  cursor: pointer;
+}
+.courseDescription,
+.instructorName {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+}
+.courseDescription {
+  font-size: var(--font-size-xs);
+  line-height: 14.5px;
+  font-weight: 300;
+}
+.instructorName {
+  line-height: 28px;
+  color: var(--gray-black);
+  width: 248px;
+}
+.rating1 {
+  font-weight: 600;
+}
+.rating45 {
+  position: relative;
+  line-height: 20px;
+}
+.courseData,
+.rating {
+  flex-shrink: 0;
+  display: flex;
+  box-sizing: border-box;
+}
+.rating {
+  border-radius: var(--br-xl);
+  background-color: var(--color-sandybrown-200);
+  width: 79px;
+  height: 29px;
+  flex-direction: row;
+  padding: var(--padding-3xs);
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: var(--font-size-3xs);
+  color: var(--gray-white);
+}
+.courseData {
+  width: 649px;
+  height: 190px;
+  flex-direction: column;
+  padding: var(--padding-mini) 0;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-base);
+}
+.free {
+  position: relative;
+  line-height: 32px;
+  font-weight: 600;
+}
+.cost,
+.course {
+  background-color: var(--color-royalblue-200);
+  width: 38px;
+  height: 18px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: row;
+  padding: 0 var(--padding-mini);
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: var(--font-size-3xs);
+  color: var(--gray-white);
+}
+.course {
+  border-radius: var(--br-3xs);
+  background-color: var(--color-whitesmoke-200);
+  width: 1070px;
+  height: 230px;
+  padding: var(--padding-3xl) var(--padding-3xs);
+  justify-content: space-between;
+  text-align: left;
+  font-size: var(--body-large-400-size);
+  color: var(--gray-700);
+  font-family: var(--body-regular-600);
+}

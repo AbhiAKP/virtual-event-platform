@@ -3,6 +3,7 @@
 import Home from './pages/home/home'
 import ErrorPage from "./pages/error-page";
 import { createBrowserRouter, RouterProvider } from "react-router-dom"
+import ExploreCourses from './pages/exploreCourses/ExploreCourses';
 
 function App() {
 
@@ -20,6 +21,11 @@ function App() {
     {
       path: "/home",
       element: <Home />,
+      errorElement: <ErrorPage />,
+    },
+    {
+      path: "/explore",
+      element: <ExploreCourses />,
       errorElement: <ErrorPage />,
     },
     

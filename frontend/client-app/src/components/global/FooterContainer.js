@@ -44,7 +44,7 @@ const FooterContainer = () => {
           Stay updated with the latest news and events at streamLearnr
         </div>
         <input
-          className={styles.inputField}
+          className={`${styles.inputField} ${styles.noOutline}`}
           type="text"
           placeholder="Email here"
         />

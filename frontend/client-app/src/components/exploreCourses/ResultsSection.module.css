@@ -1,0 +1,12 @@
+.resultsSection {
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  padding: var(--padding-50xl) var(--padding-81xl);
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: var(--body-large-400-size);
+  color: var(--color-dimgray-200);
+  font-family: var(--body-regular-600);
+}

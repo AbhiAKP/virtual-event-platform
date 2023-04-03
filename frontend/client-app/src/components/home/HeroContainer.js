@@ -16,7 +16,7 @@ const HeroContainer = () => {
         </div>
         <div className={styles.searchbox}>
           <input
-            className={styles.inputPlaceholder}
+            className={`${styles.inputPlaceholder} ${styles.noOutline}`}
             type="text"
             placeholder="What do want to learn?"
             maxLength={100}

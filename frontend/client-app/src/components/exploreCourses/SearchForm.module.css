@@ -1,0 +1,105 @@
+.category,
+.category:hover {
+  font-size: var(--body-large-400-size);
+}
+.category {
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  background-color: transparent;
+  position: relative;
+  line-height: 24px;
+  font-family: var(--body-regular-600);
+  color: var(--color-dimgray-100);
+  text-align: center;
+  display: inline-block;
+}
+.category:hover {
+  color: var(--color-darkgray-200);
+}
+.vectorIcon {
+  position: relative;
+  width: 37px;
+  height: 35px;
+  flex-shrink: 0;
+}
+.searchAnything,
+.searchIcon {
+  border: 0;
+  background-color: transparent;
+}
+.searchIcon {
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.searchIcon:hover {
+  padding: var(--padding-11xs);
+  box-sizing: border-box;
+}
+.searchAnything {
+  font-family: var(--font-poppins);
+  font-size: var(--header-heading-4-size);
+  flex: 1;
+  position: relative;
+  line-height: 40px;
+  color: var(--color-darkgray-100);
+  text-align: left;
+}
+
+.noOutline:focus {
+  outline: none;
+}
+
+.searchBar,
+.searchIconParent {
+  flex-shrink: 0;
+  justify-content: flex-start;
+}
+.searchIconParent {
+  width: 817px;
+  height: 41px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--gap-9xl);
+}
+.searchBar {
+  border-radius: var(--br-mini);
+  background-color: var(--color-gray-sb-200);
+  border: 1px solid var(--color-gainsboro-200);
+  width: 847px;
+  height: 65px;
+  flex-direction: column;
+  padding: var(--padding-xs) var(--padding-mini);
+  align-items: flex-start;
+}
+.search,
+.searchBar,
+.searchSection {
+  overflow: hidden;
+  display: flex;
+  box-sizing: border-box;
+}
+.search {
+  border-radius: var(--br-3xs);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+  border: 3px solid var(--color-lavender);
+  width: 1240px;
+  flex-direction: row;
+  padding: var(--padding-15xl) var(--padding-26xl);
+  align-items: center;
+  justify-content: center;
+  gap: var(--gap-24xl);
+}
+.searchSection {
+  height: 235px;
+  flex-shrink: 0;
+  flex-direction: column;
+  padding: var(--padding-51xl) var(--padding-81xl);
+  align-items: flex-start;
+  justify-content: flex-start;
+}

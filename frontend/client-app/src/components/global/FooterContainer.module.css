@@ -253,6 +253,11 @@
   align-items: flex-start;
   justify-content: flex-start;
 }
+      
+.noOutline:focus {
+  outline: none;
+}
+
 .buttonText {
   position: relative;
   line-height: 24px;
