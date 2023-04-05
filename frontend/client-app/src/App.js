@@ -2,8 +2,9 @@
 // import Login from './pages/login/login'
 import Home from './pages/home/home'
 import ErrorPage from "./pages/error-page";
-import { createBrowserRouter, RouterProvider } from "react-router-dom"
 import ExploreCourses from './pages/exploreCourses/ExploreCourses';
+import ViewCourse from './pages/viewCourse/ViewCourse';
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 function App() {
 
@@ -19,6 +20,11 @@ function App() {
     //   errorElement: <ErrorPage />,
     // },
     {
+      path: "/",
+      element: <div>Root</div>,
+      errorElement: <ErrorPage />,
+    },
+    {
       path: "/home",
       element: <Home />,
       errorElement: <ErrorPage />,
@@ -28,7 +34,11 @@ function App() {
       element: <ExploreCourses />,
       errorElement: <ErrorPage />,
     },
-    
+    {
+      path: "/viewcourse",
+      element: <ViewCourse />,
+      errorElement: <ErrorPage />,
+    },
     
   ]);
 

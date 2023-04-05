@@ -1,23 +1,64 @@
 import styles from "./HeaderContainer.module.css";
+import { Link } from "react-router-dom";
+import { useState } from "react"
 
 const HeaderContainer = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const changeNavState = () => {
+    if (isOpen) {
+      setIsOpen(!isOpen);
+      document.getElementById("mySidenav").style.width = "0";
+    } else {
+      setIsOpen(!isOpen);
+      document.getElementById("mySidenav").style.width = "300px";
+    }
+    
+  };
+
   return (
-    <div className={styles.navbar}>
-      <div className={styles.nav}>
-        <i className={styles.textlogo}>
-          <span>stream</span>
-          <span className={styles.learnr}>Learnr</span>
-        </i>
-        <div className={styles.navLinks}>
-          <button className={styles.home}>Home</button>
-          <button className={styles.about}>About</button>
-          <button className={styles.about}>Course</button>
-          <button className={styles.about}>Blog</button>
-          <button className={styles.about}>Contact</button>
-        </div>
-        <button className={styles.userIcon} />
+    <>
+      <div id="mySidenav" className={styles.sidenav}>
+        <a
+          href="javascript:void(0)"
+          className={styles.closeBtn}
+          onClick={changeNavState}
+        >
+          &times;
+        </a>
+        <a href="https://www.google.com">My Profile</a>
+        <a href="https://www.google.com">Enrolled Courses</a>
+        <a href="https://www.google.com">My Courses</a>
+        <a href="https://www.google.com">Settings</a>
+        <a href="https://www.google.com">Logout</a>
       </div>
-    </div>
+      <div className={styles.navbar}>
+        <div className={styles.nav}>
+          <i className={styles.textlogo}>
+            <span>stream</span>
+            <span className={styles.learnr}>Learnr</span>
+          </i>
+          <div className={styles.navLinks}>
+            <Link to="/home">
+              <button className={styles.navItem}>Home</button>
+            </Link>
+            <Link to="/">
+              <button className={styles.navItem}>About</button>
+            </Link>
+            <Link to="/explore">
+              <button className={styles.navItem}>Course</button>
+            </Link>
+            <Link to="/">
+              <button className={styles.navItem}>Blog</button>
+            </Link>
+            <Link to="/">
+              <button className={styles.navItem}>Contact</button>
+            </Link>
+          </div>
+          <button className={styles.userIcon} onClick={changeNavState} />
+        </div>
+      </div>
+    </>
   );
 };
 

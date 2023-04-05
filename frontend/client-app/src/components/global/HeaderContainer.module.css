@@ -1,8 +1,7 @@
 .learnr {
   color: var(--gray-white);
 }
-.about,
-.home,
+.navItem,
 .textlogo {
   position: relative;
   line-height: 40px;
@@ -11,8 +10,7 @@
   font-weight: 700;
   text-shadow: 0 8px 5px rgba(0, 0, 0, 0.4);
 }
-.about,
-.home {
+.navItem {
   cursor: pointer;
   border: 0;
   padding: 0;
@@ -24,8 +22,7 @@
   text-align: center;
   display: inline-block;
 }
-.about:hover,
-.home:hover {
+.navItem:hover {
   color: var(--color-lightsteelblue);
 }
 .navLinks {
@@ -79,3 +76,45 @@
   color: var(--secondary-500);
   font-family: var(--font-pt-serif);
 }
+
+/* Side Navbar Styling */
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0px;
+  right: 0px;
+  background-color: #2c44e46a;
+  overflow-x: hidden;
+  padding-top: 100px;
+  justify-content: center;
+  transition: 0.3s;
+}
+.sidenav a {
+  padding: 12px 12px 12px 12px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #ffffff;
+  display: block;
+  transition: 0.2s;
+}
+.sidenav a:hover {
+  color: #0000005a;
+}
+.sidenav .closeBtn {
+  position: absolute;
+  top: 30px;
+  left: 0;
+  font-size: 45px;
+  margin-left: 10px;
+  margin-bottom: 30px;
+  color: #dddddd;
+  text-decoration: none;
+}
+.sidenav .closeBtn:hover {
+  color: white;
+  text-decoration: none;
+}
+
+

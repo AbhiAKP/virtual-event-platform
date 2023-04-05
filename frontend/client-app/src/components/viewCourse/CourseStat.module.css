@@ -1,0 +1,28 @@
+.staticon {
+  position: relative;
+  width: 59px;
+  height: 59px;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+.coursestat,
+.stattext {
+  display: flex;
+  align-items: center;
+}
+.stattext {
+  position: relative;
+  line-height: 32px;
+  width: 295px;
+  height: 44px;
+  flex-shrink: 0;
+}
+.coursestat {
+  flex-direction: row;
+  justify-content: flex-start;
+  gap: var(--gap-xl);
+  text-align: left;
+  font-size: var(--body-body-xl-size);
+  color: var(--color-black);
+  font-family: var(--body-large-600);
+}

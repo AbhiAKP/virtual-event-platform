@@ -1,0 +1,11 @@
+.objectives {
+  align-self: stretch;
+  position: relative;
+  font-size: var(--body-large-600-size);
+  line-height: 28px;
+  font-family: var(--body-large-600);
+  color: var(--color-black);
+  text-align: left;
+  display: flex;
+  align-items: center;
+}

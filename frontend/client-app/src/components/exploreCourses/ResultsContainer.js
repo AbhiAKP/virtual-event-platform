@@ -9,7 +9,15 @@ const ResultsContainer = () => {
       </div>
       <CourseCard
         courseImg="/saly2@1x.jpg"
-        courseName="The Ultimate Web Developement Bootcamp"
+        courseName="The Complete Data Science Bootcamp for Beginners"
+        courseDescription="Learn the fundamentals of UI/UX from the experienced Instructoras from Meta."
+        instructorName="Jones Abile"
+        rating="4.5"
+        coursePrice="FREE"
+      />
+      <CourseCard
+        courseImg="/saly2@1x.jpg"
+        courseName="The Ultimate Web Developement Bootcamp for Beginners"
         courseDescription="Learn the fundamentals of UI/UX from the experienced Instructoras from Meta."
         instructorName="Jacob Jones"
         rating="4.5"
@@ -17,7 +25,7 @@ const ResultsContainer = () => {
       />
       <CourseCard
         courseImg="/saly2@1x.jpg"
-        courseName="The Ultimate Data Science Bootcamp"
+        courseName="The Ultimate Machine Learning Bootcamp for Beginners"
         courseDescription="Learn the fundamentals of UI/UX from the experienced Instructoras from Meta."
         instructorName="Jacob Jones"
         rating="4.5"
@@ -25,7 +33,7 @@ const ResultsContainer = () => {
       />
       <CourseCard
         courseImg="/saly2@1x.jpg"
-        courseName="The Ultimate Machine Learning Bootcamp"
+        courseName="The Ultimate Devops Bootcamp for Beginners"
         courseDescription="Learn the fundamentals of UI/UX from the experienced Instructoras from Meta."
         instructorName="Jacob Jones"
         rating="4.5"
@@ -33,7 +41,7 @@ const ResultsContainer = () => {
       />
       <CourseCard
         courseImg="/saly2@1x.jpg"
-        courseName="The Ultimate Devops Bootcamp"
+        courseName="The Ultimate Software Engineering Bootcamp for Beginners"
         courseDescription="Learn the fundamentals of UI/UX from the experienced Instructoras from Meta."
         instructorName="Jacob Jones"
         rating="4.5"
@@ -41,15 +49,7 @@ const ResultsContainer = () => {
       />
       <CourseCard
         courseImg="/saly2@1x.jpg"
-        courseName="The Ultimate Software Engineering Bootcamp"
-        courseDescription="Learn the fundamentals of UI/UX from the experienced Instructoras from Meta."
-        instructorName="Jacob Jones"
-        rating="4.5"
-        coursePrice="FREE"
-      />
-      <CourseCard
-        courseImg="/saly2@1x.jpg"
-        courseName="The Ultimate Cloud Computing Bootcamp"
+        courseName="The Ultimate Cloud Computing Bootcamp for Beginners"
         courseDescription="Learn the fundamentals of UI/UX from the experienced Instructoras from Meta."
         instructorName="Jacob Jones"
         rating="4.5"

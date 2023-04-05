@@ -1,0 +1,41 @@
+.coursetrack {
+  flex-shrink: 0;
+  display: flex;
+}
+.coursetrack1,
+.sectionheading {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+}
+.sectionheading {
+  position: relative;
+  letter-spacing: 0.01em;
+  line-height: 40px;
+  font-weight: 600;
+  width: 354px;
+  height: 70px;
+}
+.coursetrack,
+.coursetrack1 {
+  flex-direction: column;
+}
+.coursetrack1 {
+  height: 1243px;
+  justify-content: center;
+  gap: var(--gap-lg);
+}
+.coursetrack {
+  width: 1440px;
+  height: 1569px;
+  overflow: hidden;
+  padding: var(--padding-26xl) var(--padding-81xl);
+  box-sizing: border-box;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-13xl);
+  text-align: left;
+  font-size: var(--header-heading-3-size);
+  color: var(--color-black);
+  font-family: var(--body-large-600);
+}

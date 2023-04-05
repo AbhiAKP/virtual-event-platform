@@ -73,12 +73,8 @@
   font-size: var(--body-regular-600-size);
   color: var(--gray-50);
 }
-.about,
-.blog,
-.contact,
-.course,
 .explore,
-.home {
+.exploreItem {
   position: relative;
   display: flex;
   align-items: flex-end;
@@ -90,11 +86,7 @@
   width: 103px;
   height: 34px;
 }
-.about,
-.blog,
-.contact,
-.course,
-.home {
+.exploreItem {
   cursor: pointer;
   border: 0;
   padding: 0;
@@ -104,38 +96,6 @@
   font-family: var(--body-regular-600);
   color: var(--gray-100);
   text-align: left;
-}
-.home {
-  width: 51px;
-  height: 26px;
-}
-.about:hover,
-.blog:hover,
-.business:hover,
-.contact:hover,
-.course:hover,
-.design:hover,
-.development:hover,
-.home:hover,
-.lifestyle:hover,
-.marketing:hover {
-  color: var(--color-khaki);
-}
-.about {
-  width: 54px;
-  height: 25px;
-}
-.course {
-  width: 62px;
-  height: 26px;
-}
-.blog,
-.contact {
-  width: 41px;
-  height: 25px;
-}
-.contact {
-  width: 68px;
 }
 .exploreSection {
   position: absolute;
@@ -147,12 +107,12 @@
   justify-content: flex-start;
   gap: var(--gap-mini);
 }
-.business,
+.exploreItem:hover,
+.categoryItem:hover {
+  color: var(--color-khaki);
+}
 .category,
-.design,
-.development,
-.lifestyle,
-.marketing {
+.categoryItem {
   position: relative;
   display: flex;
   align-items: flex-end;
@@ -164,7 +124,7 @@
   width: 105px;
   height: 33px;
 }
-.business {
+.categoryItem {
   cursor: pointer;
   border: 0;
   padding: 0;
@@ -175,36 +135,6 @@
   color: var(--gray-100);
   text-align: left;
   height: 25px;
-}
-.design {
-  width: 52px;
-}
-.design,
-.development,
-.lifestyle,
-.marketing {
-  cursor: pointer;
-  border: 0;
-  padding: 0;
-  background-color: transparent;
-  font-size: var(--body-regular-600-size);
-  line-height: 24px;
-  font-family: var(--body-regular-600);
-  color: var(--gray-100);
-  text-align: left;
-  height: 25px;
-}
-.development {
-  width: 98px;
-}
-.marketing {
-  width: 77px;
-}
-.business {
-  width: 67px;
-}
-.lifestyle {
-  width: 66px;
 }
 .categorySection {
   position: absolute;

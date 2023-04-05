@@ -1,4 +1,5 @@
 import styles from "./CourseCard.module.css";
+import { Link } from "react-router-dom"
 
 const CourseCard = ({
   courseImg,
@@ -12,7 +13,9 @@ const CourseCard = ({
     <div className={styles.course}>
       <img className={styles.courseImgIcon} alt="" src={courseImg} />
       <div className={styles.courseData}>
-        <a className={styles.courseName} href="https://www.google.com">{courseName}</a>
+        <Link className={styles.courseLink} to="/viewcourse">
+          <a className={styles.courseName} href="#">{courseName}</a>
+        </Link>
         <div className={styles.courseDescription}>{courseDescription}</div>
         <div className={styles.instructorName}>{instructorName}</div>
         <div className={styles.rating}>

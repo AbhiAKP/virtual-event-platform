@@ -1,4 +1,5 @@
 import styles from "./FooterContainer.module.css";
+import { Link } from "react-router-dom";
 
 const FooterContainer = () => {
   return (
@@ -24,19 +25,39 @@ const FooterContainer = () => {
       </div>
       <div className={styles.exploreSection}>
         <div className={styles.explore}>Explore</div>
-        <button className={styles.home}>Home</button>
-        <button className={styles.about}>About</button>
-        <button className={styles.course}>Course</button>
-        <button className={styles.blog}>Blog</button>
-        <button className={styles.contact}>Contact</button>
+        <Link to="/home">
+          <button className={styles.exploreItem}>Home</button>
+        </Link>
+        <Link to="/">
+          <button className={styles.exploreItem}>About</button>
+        </Link>
+        <Link to="/explore">
+          <button className={styles.exploreItem}>Course</button>
+        </Link>
+        <Link to="/">
+          <button className={styles.exploreItem}>Blog</button>
+        </Link>
+        <Link to="/">
+          <button className={styles.exploreItem}>Contact</button>
+        </Link>
       </div>
       <div className={styles.categorySection}>
         <div className={styles.category}>Category</div>
-        <button className={styles.design}>Design</button>
-        <button className={styles.development}>Development</button>
-        <button className={styles.marketing}>Marketing</button>
-        <button className={styles.business}>Business</button>
-        <button className={styles.lifestyle}>Lifestyle</button>
+        <Link to="/">
+          <button className={styles.categoryItem}>Design</button>
+        </Link>
+        <Link to="/">
+          <button className={styles.categoryItem}>Development</button>
+        </Link>
+        <Link to="/">
+          <button className={styles.categoryItem}>Marketing</button>
+        </Link>
+        <Link to="/">
+          <button className={styles.categoryItem}>Business</button>
+        </Link>
+        <Link to="/">
+          <button className={styles.categoryItem}>Lifestyle</button>
+        </Link>
       </div>
       <div className={styles.subscribeSection}>
         <div className={styles.subscribe}>Subscribe</div>

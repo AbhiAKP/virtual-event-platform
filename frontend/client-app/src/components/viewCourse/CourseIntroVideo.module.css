@@ -1,0 +1,23 @@
+@keyframes shadow-drop-bottom {
+  0% {
+    box-shadow: 0 0 0 0 transparent;
+  }
+  to {
+    box-shadow: 0 12px 20px -12px rgb(0 0 0/35%);
+  }
+}
+.courseintrovideo {
+  position: absolute;
+  top: 172px;
+  left: 779px;
+  box-shadow: 15px 15px 2px -5px rgba(202, 207, 213, 0.5);
+  border: 3px solid var(--color-lightsmokeblue);
+  box-sizing: border-box;
+  width: 415px;
+  height: 236px;
+  overflow: hidden;
+}
+.courseintrovideo:hover {
+  animation: 1s ease 0s 1 normal none shadow-drop-bottom;
+  opacity: 1;
+}
