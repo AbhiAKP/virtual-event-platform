@@ -116,5 +116,10 @@
   color: white;
   text-decoration: none;
 }
+.navLiItems {
+  list-style-type: none;
+  margin: 10;
+  padding: 10;
+}
 
 

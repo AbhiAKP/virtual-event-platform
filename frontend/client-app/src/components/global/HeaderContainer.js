@@ -26,11 +26,14 @@ const HeaderContainer = () => {
         >
           &times;
         </a>
-        <a href="https://www.google.com">My Profile</a>
-        <a href="https://www.google.com">Enrolled Courses</a>
-        <a href="https://www.google.com">My Courses</a>
-        <a href="https://www.google.com">Settings</a>
-        <a href="https://www.google.com">Logout</a>
+        <ul className={styles.navLiItems}>
+          <Link to="/mycourse"><li>My Profile</li></Link>
+        <Link to="/mycourse"><li>Enrolled Courses</li></Link>
+        <Link to="/mycourse"><li>My Courses</li></Link>
+        <Link to="/mycourse"><li>Settings</li></Link>
+        <Link to="/mycourse"><li>Logout</li></Link>
+        </ul>
+
       </div>
       <div className={styles.navbar}>
         <div className={styles.nav}>

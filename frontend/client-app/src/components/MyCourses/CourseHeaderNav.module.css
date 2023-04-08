@@ -1,0 +1,164 @@
+.coursepagetitle,
+.vectorIcon {
+  position: relative;
+  flex-shrink: 0;
+}
+.coursepagetitle {
+  line-height: 48px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  width: 223px;
+  height: 52px;
+}
+.vectorIcon {
+  width: 37px;
+  height: 35px;
+}
+.searchIcon,
+.searchYourCourse {
+  border: 0;
+  background-color: transparent;
+  position: absolute;
+  display: flex;
+  align-items: center;
+}
+.searchIcon {
+  cursor: pointer;
+  padding: 0;
+  top: 2px;
+  left: 0;
+  width: 37px;
+  height: 36px;
+  flex-direction: column;
+  justify-content: center;
+}
+.searchIcon:hover {
+  padding: var(--padding-xl);
+  box-sizing: border-box;
+}
+.searchYourCourse {
+  font-family: var(--body-body-xl);
+  font-size: var(--body-body-xl-size);
+  top: 0;
+  left: 62px;
+  line-height: 32px;
+  color: var(--color-gray-300);
+  text-align: left;
+  width: 308px;
+  height: 40px;
+}
+.noOutline:focus {
+  outline: none;
+}
+.searchgroup {
+  align-self: stretch;
+  position: relative;
+  height: 40px;
+  flex-shrink: 0;
+}
+.searchBar {
+  border-radius: var(--br-11xs);
+  background-color: var(--color-gray-400);
+  border-top: 1px solid var(--color-lightsteelblue-100);
+  border-right: 1px solid var(--color-lightsteelblue-100);
+  border-bottom: 2px solid var(--color-lightsteelblue-100);
+  border-left: 1px solid var(--color-lightsteelblue-100);
+  box-sizing: border-box;
+  width: 402px;
+  height: 68px;
+  flex-shrink: 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  padding: var(--padding-xs) var(--padding-mini);
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.vectorIcon1 {
+  position: absolute;
+  height: 75%;
+  width: 78.26%;
+  top: 12.5%;
+  right: 12.5%;
+  bottom: 12.5%;
+  left: 9.24%;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+}
+.performance {
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  background-color: transparent;
+  top: 0;
+  left: 0;
+  width: 65px;
+  height: 65px;
+}
+.addcourse:hover,
+.performance:hover {
+  width: 68px;
+  height: 68px;
+}
+.addcourse,
+.performance,
+.vectorIcon2 {
+  position: absolute;
+  overflow: hidden;
+}
+.vectorIcon2 {
+  height: 83.33%;
+  width: 83.33%;
+  top: 8.33%;
+  right: 8.33%;
+  bottom: 8.33%;
+  left: 8.33%;
+  max-width: 100%;
+  max-height: 100%;
+}
+.addcourse {
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  background-color: transparent;
+  top: 0;
+  left: 100px;
+  width: 65px;
+  height: 65px;
+}
+.navs {
+  position: relative;
+  width: 165px;
+  height: 65px;
+  flex-shrink: 0;
+}
+.navsection {
+  width: 1240px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.courseheadsection {
+  width: 1440px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  padding: var(--padding-20xl) var(--padding-81xl);
+  box-sizing: border-box;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-30xl);
+  text-align: left;
+  font-size: var(--header-heading-1-size);
+  color: var(--color-black);
+  font-family: var(--body-body-xl);
+}
+@media screen and (max-width: 1200px) {
+  .performance {
+    width: 68px;
+    height: 68px;
+  }
+}
