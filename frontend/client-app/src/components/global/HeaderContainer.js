@@ -1,6 +1,6 @@
 import styles from "./HeaderContainer.module.css";
 import { Link } from "react-router-dom";
-import { useState } from "react"
+import { useState } from "react";
 
 const HeaderContainer = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -13,27 +13,31 @@ const HeaderContainer = () => {
       setIsOpen(!isOpen);
       document.getElementById("mySidenav").style.width = "300px";
     }
-    
   };
 
   return (
     <>
       <div id="mySidenav" className={styles.sidenav}>
-        <a
-          href="javascript:void(0)"
-          className={styles.closeBtn}
-          onClick={changeNavState}
-        >
+        <button className={styles.closeBtn} onClick={changeNavState}>
           &times;
-        </a>
+        </button>
         <ul className={styles.navLiItems}>
-          <Link to="/mycourse"><li>My Profile</li></Link>
-        <Link to="/mycourse"><li>Enrolled Courses</li></Link>
-        <Link to="/mycourse"><li>My Courses</li></Link>
-        <Link to="/mycourse"><li>Settings</li></Link>
-        <Link to="/mycourse"><li>Logout</li></Link>
+          <Link to="/mycourse">
+            <li>My Profile</li>
+          </Link>
+          <Link to="/mycourse">
+            <li>Enrolled Courses</li>
+          </Link>
+          <Link to="/mycourse">
+            <li>My Courses</li>
+          </Link>
+          <Link to="/mycourse">
+            <li>Settings</li>
+          </Link>
+          <Link to="/mycourse">
+            <li>Logout</li>
+          </Link>
         </ul>
-
       </div>
       <div className={styles.navbar}>
         <div className={styles.nav}>

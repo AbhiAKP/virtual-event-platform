@@ -5,9 +5,14 @@ import ErrorPage from "./pages/error-page";
 import ExploreCourses from './pages/exploreCourses/ExploreCourses';
 import ViewCourse from './pages/viewCourse/ViewCourse';
 import MyCourses from './pages/MyCourses/MyCourses';
+import { useEffect } from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 function App() {
+
+  useEffect(() => {
+    window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
+  }, []);
 
   const router = createBrowserRouter([
     // {
@@ -49,9 +54,9 @@ function App() {
   ]);
 
   return (
-    <div>
+    <>
       <RouterProvider router={router} />
-    </div>
+    </>
   );
 }
 

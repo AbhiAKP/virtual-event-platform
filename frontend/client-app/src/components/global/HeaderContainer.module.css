@@ -106,15 +106,19 @@
   position: absolute;
   top: 30px;
   left: 0;
-  font-size: 45px;
+  font-size: 60px;
   margin-left: 10px;
   margin-bottom: 30px;
   color: #dddddd;
   text-decoration: none;
+  border: none;
+  background-color: transparent;
 }
 .sidenav .closeBtn:hover {
   color: white;
   text-decoration: none;
+  border: none;
+  background-color: transparent;
 }
 .navLiItems {
   list-style-type: none;
