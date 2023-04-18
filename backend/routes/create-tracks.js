@@ -2,15 +2,17 @@ const express = require("express");
 const routes = express.Router();
 const db = require("../dbConnection");
 const verifyJWT = require("../middleware/verifyJWT");
+const { v4: uuidv4 } = require('uuid');
+
 
 routes.post('/', verifyJWT, (req, res) => {
     const data = req.body;
     let values = [];
     
-    let sql = "INSERT INTO course_tracks (course_id, track_title, track_desc, track_date, track_link) VALUES ?";
+    let sql = "INSERT INTO course_tracks (course_id, track_title, track_desc, track_date, track_link_id) VALUES ?";
 
     for (let i = 0; i < data.length; i++) {
-      values.push([data[i].course_id, data[i].track_title, data[i].track_desc, data[i].track_date, data[i].track_link]);
+      values.push([data[i].course_id, data[i].track_title, data[i].track_desc, data[i].track_date, uuidv4()]);
     }
 
     db.query(sql, [values], (err, result, fields) => {

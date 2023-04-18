@@ -36,7 +36,7 @@ routes.put('/track/:track_id', verifyJWT, (req, res) => {
               const values = [];
 
               for (const key in updateData) {
-                if (key === 'course_id') {
+                if (key === 'course_id' || key == 'track_link_id') {
                     continue;
                 }
                 columns.push(key);

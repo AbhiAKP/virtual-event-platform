@@ -14,13 +14,14 @@ routes.post("/", verifyJWT, (req, res) => {
     category,
     subcategory,
     course_objective,
-    course_duration
+    course_duration,
+    course_keywords
   } = req.body;
 
   // Define the SQL query to insert data into the courses table
   const qry = `
-    INSERT INTO courses (user_name, course_name, course_desc, course_img, course_video, category, subcategory, course_objective, course_duration)
-    VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+    INSERT INTO courses (user_name, course_name, course_desc, course_img, course_video, category, subcategory, course_objective, course_duration, course_keywords)
+    VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
   `;
 
   // Define the values to insert into the courses table
@@ -33,7 +34,8 @@ routes.post("/", verifyJWT, (req, res) => {
     category,
     subcategory,
     JSON.stringify(course_objective),
-    course_duration
+    course_duration,
+    course_keywords
   ];
 
   // Execute the SQL query

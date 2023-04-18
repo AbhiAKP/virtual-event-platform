@@ -39,8 +39,7 @@ const loginUser = (req, res) => {
           { expiresIn: process.env.JWT_REFRESH_TOKEN_EXPIRE_TIME }
         );
 
-        const qry =
-          "UPDATE users SET refreshtoken=? where username=? OR email=?;";
+        const qry = "UPDATE users SET refreshtoken=? where username=? OR email=?;";
         db.query(
           qry,
           [refreshToken, req.body.username, req.body.username],
@@ -73,3 +72,4 @@ const loginUser = (req, res) => {
 };
 
 module.exports = loginUser;
+
