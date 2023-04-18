@@ -1,6 +1,7 @@
-body {
+body .login {
   margin: 0;
   padding: 0;
+  font-family: cursive;
 }
 
 .login {
@@ -41,17 +42,17 @@ body {
   background-size: cover;
 }
 
-h1 {
+.title {
   font-size: 40px;
   margin: 0px;
 }
 
-p {
+.desc {
   font-weight: 400;
   font-stretch: expanded;
 }
 
-span {
+.span {
   font-size: 0.9rem;
   margin: 5px;
 }
@@ -80,13 +81,13 @@ span {
   margin-bottom: 30px;
 }
 
-form {
+.login_form {
   display: flex;
   flex-direction: column;
   gap: 30px;
 }
 
-input {
+.login_input {
   border: none;
   border-bottom: 1px solid lightgray;
   border-right: 1px solid lightgray;
@@ -102,4 +103,9 @@ input {
   cursor: pointer;
   border: none;
   background-color: rgb(13, 137, 195);
+}
+
+.error {
+  font-size: smaller;
+  color: rgb(255, 87, 87);
 }

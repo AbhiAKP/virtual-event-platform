@@ -13,12 +13,12 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 77px;
-  height: 39px;
+  width: fit-content;
+  height: fit-content;
   flex-shrink: 0;
 }
 .subCategory {
-  width: 122px;
+  width: fit-content;
 }
 .categoryinfo {
   display: flex;

@@ -49,7 +49,7 @@ const CoursePreview = ({
               <div className={styles.rating1}>
                 <b className={styles.rating45}>{courseRating}</b>
               </div>
-              <div className={styles.studentscount}>{studentsCount}</div>
+              <div className={styles.studentscount}>({studentsCount})</div>
             </div>
             <button className={styles.button} style={buttonStyle}>
               <div className={styles.enroll}>{enrollValue}</div>

@@ -1,10 +1,10 @@
 import ResultsContainer from "./ResultsContainer";
 import styles from "./ResultsSection.module.css";
 
-const ResultsSection = () => {
+const ResultsSection = ({ keywords }) => {
   return (
     <div className={styles.resultsSection}>
-      <ResultsContainer />
+      <ResultsContainer  keywords={keywords} />
     </div>
   );
 };

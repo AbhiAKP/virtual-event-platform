@@ -1,4 +1,4 @@
-body {
+body .register{
     margin: 0;
     padding: 0;
     font-family: cursive;
@@ -34,17 +34,17 @@ body {
 }
 
 
-h1 {
+.title {
     font-size: 40px;
     margin: 0px;
 }
 
-p {
+.desc {
     font-weight: 400;
     font-stretch: expanded;
 }
 
-span {
+.span {
     font-size: 0.9rem;
     margin: 5px;
 }
@@ -79,7 +79,7 @@ span {
     gap: 15px;
 }
 
-input {
+.form_input {
     border: none;
     border-bottom: 1px solid lightgray;
     border-right: 1px solid lightgray;

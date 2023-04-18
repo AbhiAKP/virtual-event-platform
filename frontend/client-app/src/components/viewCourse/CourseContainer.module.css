@@ -21,13 +21,14 @@
   flex-direction: column;
 }
 .coursetrack1 {
-  height: 1243px;
-  justify-content: center;
+  height: fit-content;
+  /* justify-content: center; */
   gap: var(--gap-lg);
 }
+
 .coursetrack {
   width: 1440px;
-  height: 1569px;
+  height: fit-content;
   overflow: hidden;
   padding: var(--padding-26xl) var(--padding-81xl);
   box-sizing: border-box;

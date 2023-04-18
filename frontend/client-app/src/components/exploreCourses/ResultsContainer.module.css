@@ -6,9 +6,10 @@
 .resultsTab {
   display: flex;
   align-items: center;
-  justify-content: center;
+  /* justify-content: center; */
 }
 .resultCount {
+  justify-content: center;
   align-self: stretch;
   border-radius: var(--br-7xl);
   border-top: 1px solid var(--color-whitesmoke-300);
@@ -24,7 +25,7 @@
   border: 1px solid var(--color-gainsboro-100);
   box-sizing: border-box;
   width: 1240px;
-  height: 1646px;
+  height: fit-content;
   flex-shrink: 0;
   overflow: hidden;
   flex-direction: column;

@@ -1,60 +1,41 @@
 import CourseCard from "./CourseCard";
 import styles from "./ResultsContainer.module.css";
+import { useState, useEffect } from "react";
 
-const ResultsContainer = () => {
+const ResultsContainer = ({ keywords = '' }) => {
+  const accessToken = localStorage.getItem("accessToken");
+  const [courses, setCourses] = useState([]);
+
+  
+  useEffect(() => {
+  const fetchData = async () => {
+    const response = await fetch(`http://localhost:3000/search-courses/search?keywords=${keywords}`, { headers: {
+      'Authorization': `Bearer ${accessToken}`
+    }});
+    const data = await response.json();
+    setCourses(data);
+  };
+  
+    fetchData();
+  }, [keywords]);
+  
   return (
     <div className={styles.resultsTab}>
       <div className={styles.resultCount}>
-        <div className={styles.resultcount}>6 results</div>
+        <div className={styles.resultcount}>{courses.length} results</div>
       </div>
-      <CourseCard
-        courseImg="/saly2@1x.jpg"
-        courseName="The Complete Data Science Bootcamp for Beginners"
-        courseDescription="Learn the fundamentals of UI/UX from the experienced Instructoras from Meta."
-        instructorName="Jones Abile"
-        rating="4.5"
-        coursePrice="FREE"
-      />
-      <CourseCard
-        courseImg="/saly2@1x.jpg"
-        courseName="The Ultimate Web Developement Bootcamp for Beginners"
-        courseDescription="Learn the fundamentals of UI/UX from the experienced Instructoras from Meta."
-        instructorName="Jacob Jones"
-        rating="4.5"
-        coursePrice="FREE"
-      />
-      <CourseCard
-        courseImg="/saly2@1x.jpg"
-        courseName="The Ultimate Machine Learning Bootcamp for Beginners"
-        courseDescription="Learn the fundamentals of UI/UX from the experienced Instructoras from Meta."
-        instructorName="Jacob Jones"
-        rating="4.5"
-        coursePrice="FREE"
-      />
-      <CourseCard
-        courseImg="/saly2@1x.jpg"
-        courseName="The Ultimate Devops Bootcamp for Beginners"
-        courseDescription="Learn the fundamentals of UI/UX from the experienced Instructoras from Meta."
-        instructorName="Jacob Jones"
-        rating="4.5"
-        coursePrice="FREE"
-      />
-      <CourseCard
-        courseImg="/saly2@1x.jpg"
-        courseName="The Ultimate Software Engineering Bootcamp for Beginners"
-        courseDescription="Learn the fundamentals of UI/UX from the experienced Instructoras from Meta."
-        instructorName="Jacob Jones"
-        rating="4.5"
-        coursePrice="FREE"
-      />
-      <CourseCard
-        courseImg="/saly2@1x.jpg"
-        courseName="The Ultimate Cloud Computing Bootcamp for Beginners"
-        courseDescription="Learn the fundamentals of UI/UX from the experienced Instructoras from Meta."
-        instructorName="Jacob Jones"
-        rating="4.5"
-        coursePrice="FREE"
-      />
+      {courses.map((course) => (
+        <CourseCard
+          key={course.id}
+          course_id={course.id}
+          courseImg={"/saly2@1x.jpg" ?? course.course_img}
+          courseName={course.course_name}
+          courseDescription={course.course_desc}
+          instructorName={course.instructor_name ?? "Jones Abile"}
+          rating={course.rating ?? "4.5"}
+          coursePrice="FREE"
+        />
+      ))}
     </div>
   );
 };

@@ -32,3 +32,42 @@
   justify-content: center;
   gap: var(--gap-15xl);
 }
+
+.trackdesc {
+  font-size: var(--body-regular-600-size);
+  line-height: 20px;
+  font-weight: 200;
+  font-family: var(--body-regular-600);
+}
+
+.trackdata {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fcfcfc;
+  padding: 10px;
+}
+
+.date {
+  /* font-weight: bold; */
+  font-size: 18px;
+  margin-right: 10px;
+}
+
+.link {
+  background-color: rgb(93, 163, 255);
+  border-radius: 4px;
+  border: none;
+  padding: 5px 10px;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.link:hover {
+  background-color: #1a68bb;
+}
+
+.link a {
+  text-decoration: none;
+  color: #fff;
+}
