@@ -1,5 +1,5 @@
 import styles from "./CourseCard.module.css";
-import { Link } from "react-router-dom"
+import { Link } from "react-router-dom";
 
 const CourseCard = ({
   course_id,

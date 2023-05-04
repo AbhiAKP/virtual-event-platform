@@ -1,0 +1,148 @@
+.courseDetails {
+  color: rgb(106, 106, 106);
+  position: relative;
+  font-size: var(--body-body-xl-size);
+  line-height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 215px;
+  height: 34px;
+  flex-shrink: 0;
+  margin-bottom: 30px;
+}
+.courseName {
+  position: relative;
+  line-height: 30px;
+  font-weight: 600;
+}
+.inputfield {
+  border: 1px solid var(--color-darkgray-300);
+  background-color: transparent;
+  position: relative;
+  border-radius: var(--br-11xs);
+  box-sizing: border-box;
+  width: 610px;
+  height: 35px;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+.coursename {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.dropdown,
+.inputfield1 {
+  position: relative;
+  border: 1px solid var(--color-darkgray-300);
+  box-sizing: border-box;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+.inputfield1 {
+  background-color: transparent;
+  border-radius: var(--br-11xs);
+  width: 610px;
+  height: 85px;
+}
+.dropdown {
+  width: 190px;
+  height: 28px;
+}
+.coursedropdownsection {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-xl);
+}
+.inputfield8 {
+  position: relative;
+  border-radius: var(--br-11xs);
+  border: 1px solid var(--color-darkgray-300);
+  box-sizing: border-box;
+  width: 610px;
+  height: 35px;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+.courseobjectives {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 6px;
+}
+.fileselect {
+  position: relative;
+  border: 1px solid var(--color-darkgray-300);
+  box-sizing: border-box;
+  width: 295px;
+  height: 28px;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+.coursefileuploadsection {
+  width: 610px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-xl);
+}
+.createCourse {
+  position: relative;
+  font-size: 14px;
+  line-height: 28px;
+  font-family: var(--body-regular-600);
+  color: var(--color-white);
+  text-align: center;
+}
+.button {
+  cursor: pointer;
+  border: 0;
+  padding: 10px;
+  background-color: rgba(64, 106, 255, 0.91);
+  border-radius: 20px;
+  width: 190px;
+  height: 38px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: row;
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30px;
+}
+.button:hover {
+  background-color: rgba(65, 101, 235, 0.91);
+}
+.createcourse,
+.createcoursemodal {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+.createcoursemodal {
+  background-color: rgba(238, 241, 255, 0.227);
+  border-radius: 4px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  padding: 30px 250px;
+  margin: 30px;
+  gap: var(--gap-xl);
+}
+.createcourse {
+  position: relative;
+  background-color: var(--color-white);
+  width: 100%;
+  height: auto;
+  text-align: center;
+  font-size: var(--body-regular-600-size);
+  color: var(--color-darkslategray);
+  font-family: var(--body-regular-600);
+}
+

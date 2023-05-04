@@ -1,4 +1,5 @@
 import styles from "./CourseHeaderNav.module.css";
+import { Link } from "react-router-dom";
 
 const CourseHeaderNav = () => {
   return (
@@ -20,12 +21,17 @@ const CourseHeaderNav = () => {
           </div>
         </div>
         <div className={styles.navs}>
-          <button className={styles.performance}>
-            <img className={styles.vectorIcon1} alt="" src="/vector_4.svg" />
-          </button>
-          <button className={styles.addcourse}>
-            <img className={styles.vectorIcon2} alt="" src="/vector_5.svg" />
-          </button>
+          <Link to={`/createcourse`}>
+            <button className={styles.performance}>
+              <img className={styles.vectorIcon1} alt="" src="/vector_4.svg" />
+            </button>
+          </Link>
+
+          <Link className={styles.courseLink} to={`/createcourse`}>
+            <button className={styles.addcourse}>
+              <img className={styles.vectorIcon2} alt="" src="/vector_5.svg" />
+            </button>
+          </Link>
         </div>
       </div>
     </div>

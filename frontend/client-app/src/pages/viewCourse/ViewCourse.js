@@ -7,8 +7,6 @@ import CourseContainer from "../../components/viewCourse/CourseContainer";
 import FooterContainer from "../../components/global/FooterContainer";
 import styles from "./ViewCourse.module.css";
 
-
-
 const ViewCourse = () => {
   const accessToken = localStorage.getItem("accessToken");
   const { course_id } = useParams();
@@ -35,8 +33,6 @@ const ViewCourse = () => {
   if (!courseData) {
     return <div>Loading...</div>;
   }
-
-
 
   return (
 <div className={styles.viewcourse}>
