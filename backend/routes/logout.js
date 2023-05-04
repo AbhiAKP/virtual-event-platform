@@ -4,7 +4,7 @@ const routes = express.Router();
 
 
 // Logout Token Route
-routes.get('/', logoutController);
+routes.post('/', logoutController);
 
 
 module.exports = routes;

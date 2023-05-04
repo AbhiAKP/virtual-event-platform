@@ -96,3 +96,8 @@ body .register{
     border: none;
     background-color: rgb(13, 137, 195);
 }
+
+.error {
+    font-size: smaller;
+    color: rgb(255, 87, 87);
+  }

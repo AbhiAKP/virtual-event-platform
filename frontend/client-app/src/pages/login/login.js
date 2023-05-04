@@ -36,9 +36,15 @@ const Login = () => {
       return;
     }
 
+    setError(null);
+
+    console.log("hello")
+    window.alert("hello")
+
     // Submit login form
     fetch("http://localhost:3000/auth/login", {
       method: "POST",
+      credentials: "include",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ username, password }),
     })
@@ -49,9 +55,9 @@ const Login = () => {
         return response.json();
       })
       .then((data) => {
-        console.log(data);
         // Set the access token in localStorage
         localStorage.setItem("accessToken", data.accessToken);
+
         // Redirect to home page
         window.location.href = `/home`;
       })
@@ -82,7 +88,7 @@ const Login = () => {
           <h1 className={styles.h1_login}>Login</h1>
           <form className={styles.login_form} onSubmit={handleSubmit}>
             <input
-            className={styles.login_input}
+              className={styles.login_input}
               type="text"
               placeholder="Username OR Email"
               value={username}
@@ -90,7 +96,7 @@ const Login = () => {
               required
             />
             <input
-            className={styles.login_input}
+              className={styles.login_input}
               type="password"
               placeholder="Password"
               value={password}

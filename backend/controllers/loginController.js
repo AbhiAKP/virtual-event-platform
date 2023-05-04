@@ -17,7 +17,7 @@ const loginUser = (req, res) => {
         .status(500)
         .json({ code: err.code, errno: err.errno, sqlMessage: err.sqlMessage });
     }
-    if (data.length == 0) {
+    if (data.length === 0) {
       return res.status(404).json("Wrong UserName or Password");
     }
 
@@ -56,9 +56,17 @@ const loginUser = (req, res) => {
           }
         );
 
+        res.set({
+          "Access-Control-Allow-Origin": "http://localhost:3001",
+          "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE",
+          "Access-Control-Allow-Headers": "Content-Type",
+          "Access-Control-Allow-Credentials": "true"
+        });
+
         res.cookie("jwt", refreshToken, {
           httpOnly: true,
           sameSite: "None",
+          secure: true,
           maxAge: 24 * 60 * 60 * 1000,
         });
         res.json({ accessToken });

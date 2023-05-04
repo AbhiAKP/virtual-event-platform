@@ -15,6 +15,31 @@ const HeaderContainer = () => {
     }
   };
 
+  const handleLogout = () => {
+    // Delete access token from memory
+    // setAccessToken(null);
+
+    // Call backend API to delete refresh token cookie
+    fetch("http://localhost:3000/logout", {
+      method: "POST",
+      credentials: "include",
+    })
+      .then((response) => {
+        if (response.status === 200 || response.status === 403) {
+          // Successfully logged out or already logged out, clear access token and redirect to login page
+          console.log("response is: ", response);
+          localStorage.removeItem("accessToken");
+          window.location.href = "/login";
+        } else {
+          // Failed to log out, display error message
+          window.alert("Failed to log out - response not ok");
+        }
+      })
+      .catch((error) => {
+        window.alert("Failed to log out", error);
+      });
+  };
+
   return (
     <>
       <div id="mySidenav" className={styles.sidenav}>
@@ -34,7 +59,7 @@ const HeaderContainer = () => {
           <Link to="/mycourse">
             <li>Settings</li>
           </Link>
-          <Link to="/mycourse">
+          <Link to="/" onClick={handleLogout}>
             <li>Logout</li>
           </Link>
         </ul>
