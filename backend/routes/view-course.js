@@ -6,11 +6,11 @@ const verifyJWT = require("../middleware/verifyJWT");
 // GET course details by id
 routes.get("/course/:course_id", verifyJWT, (req, res) => {
   const course_id = req.params.course_id;
-  const username = req.user;
+  // const username = req.user;
 
-  const qry = `SELECT * FROM courses WHERE id = ? AND user_name = ?`;
+  const qry = `SELECT * FROM courses WHERE id = ?`;
 
-  db.query(qry, [course_id, username], (err, result) => {
+  db.query(qry, [course_id], (err, result) => {
     if (err) {
       console.error(err);
       res.status(500).send("Error fetching course details");

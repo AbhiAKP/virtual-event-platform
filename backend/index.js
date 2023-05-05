@@ -11,6 +11,7 @@ const createCourseRoute = require("./routes/create-course");
 const createTracksRoute = require("./routes/create-tracks");
 const updateCourseRoute = require("./routes/update-course");
 const updateTracksRoute = require("./routes/update-tracks");
+const testRoute = require("./tests/testRoute");
 const cors = require("cors");
 const cookieParser = require("cookie-parser");
 require("dotenv").config();
@@ -48,6 +49,7 @@ server.use("/create-tracks", createTracksRoute);
 server.use("/update-course", updateCourseRoute);
 server.use("/update-tracks", updateTracksRoute);
 server.use("/logout", logoutRoute);
+server.use("/test", testRoute);
 
 //Handle Invalid Routes
 server.all("*", (req, res) => {

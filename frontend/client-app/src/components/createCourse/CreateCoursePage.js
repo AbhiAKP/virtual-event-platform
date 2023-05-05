@@ -31,28 +31,21 @@ const CreateCoursePage = () => {
     // Define a regular expression to check for allowed characters
     const allowedRegex = /^[a-zA-Z0-9.,/\\;'!"@$&()\[\]%*\-+^# ]+$/;
 
-    // If value matches allowed characters, update state with new value
-
     if (allowedRegex.test(value)) {
       setCourseData({ ...courseData, [name]: value });
     } else {
-      // If value contains disallowed characters, show error message
-      alert(`Input for ${name} contains disallowed characters`);
+      window.alert(`Input for ${name} contains disallowed characters`);
     }
   };
 
-  // const handleObjectiveChange = (event, index) => {
-  //   const newObjectives = [...courseData.course_objective];
-  //   newObjectives[`objective${index + 1}`] = event.target.value;
-  //   setCourseData({ ...courseData, course_objective: newObjectives });
-  // };
-
   const handleObjectiveChange = (event, key) => {
     const value = event.target.value;
-    setCourseData({ ...courseData, course_objective: { ...courseData.course_objective, [key]: value }, });
+    setCourseData({
+      ...courseData,
+      course_objective: { ...courseData.course_objective, [key]: value },
+    });
   };
 
-  
   const handleFileInputChange = (event) => {
     const { name } = event.target;
     const file = event.target.files[0];
@@ -65,10 +58,7 @@ const CreateCoursePage = () => {
       if (allowedExtensions.test(file.name)) {
         const formData = new FormData();
         formData.append(name, file);
-        console.log(formData)
-        window.alert(courseData)
-        setCourseData((courseData) => ({ ...courseData, [name]: formData, }));
-        window.alert(courseData)
+        setCourseData((courseData) => ({ ...courseData, [name]: formData }));
       } else {
         // If file extension is not allowed, show error message
         window.alert(`File type for ${name} is not allowed`);
@@ -85,25 +75,31 @@ const CreateCoursePage = () => {
     formData.append("category", courseData.category);
     formData.append("subcategory", courseData.subcategory);
     formData.append("course_duration", courseData.course_duration);
-    formData.append("course_objective", JSON.stringify(courseData.course_objective));
+    formData.append(
+      "course_objective",
+      JSON.stringify(courseData.course_objective)
+    );
     formData.append("course_keywords", courseData.course_keywords);
     formData.append("course_img", courseData.course_img.get("course_img"));
-    formData.append("course_video", courseData.course_video.get("course_video"));
+    formData.append(
+      "course_video",
+      courseData.course_video.get("course_video")
+    );
     console.log(formData);
+
     try {
       const response = await fetch("http://localhost:3000/create-course", {
         method: "POST",
         headers: {
-          "Content-Type": "application/json",
           Authorization: `Bearer ${accessToken}`,
         },
         body: formData,
       });
-  
+
       if (!response.ok) {
         throw new Error("Error creating course");
       }
-  
+
       window.alert("Course created successfully");
     } catch (error) {
       console.error(error);

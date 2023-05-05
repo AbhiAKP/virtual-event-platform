@@ -30,7 +30,11 @@ routes.get("/track/:trackMeetId", verifyJWT, async (req, res) => {
         db.query(query, [req.user, course_id], (err, result) => {
           if (err) {
             console.error(err);
-            return res.status(500).json({ error: "Internal Server Error while fetching enrollments data" });
+            return res
+              .status(500)
+              .json({
+                error: "Internal Server Error while fetching enrollments data",
+              });
           }
 
           if (result.length == 0) {
@@ -42,7 +46,9 @@ routes.get("/track/:trackMeetId", verifyJWT, async (req, res) => {
                   sub: req.user,
                   room: trackMeetId,
                   role:
-                    results[0].user_name === req.user ? "instructor" : "participant",
+                    results[0].user_name === req.user
+                      ? "instructor"
+                      : "participant",
                 },
                 APP_SECRET_KEY,
                 {
@@ -51,9 +57,9 @@ routes.get("/track/:trackMeetId", verifyJWT, async (req, res) => {
                   audience: "jitsi",
                 }
               );
-        
+
               const jitsiUrl = `https://${JITSI_DOMAIN}/${trackMeetId}?jwt=${token}`;
-        
+
               return res.json({ success: true, jitsiUrl });
             } catch (error) {
               console.error("Error generating Jitsi-Meet URL:", error);

@@ -7,6 +7,7 @@ import ViewCourse from './pages/viewCourse/ViewCourse';
 import MyCourses from './pages/MyCourses/MyCourses';
 import CreateCourse from './pages/createCourse/CreateCourse';
 import JoinMeet from './pages/joinMeet/JoinMeet';
+import TestMulter from './pages/testFolder/testMulter';
 import { useEffect } from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
@@ -60,6 +61,11 @@ function App() {
     {
       path: "/join-meet/:trackMeetId",
       element: <JoinMeet />,
+      errorElement: <ErrorPage />,
+    },
+    {
+      path: "/test-multer",
+      element: <TestMulter />,
       errorElement: <ErrorPage />,
     },
     

@@ -38,9 +38,6 @@ const Login = () => {
 
     setError(null);
 
-    console.log("hello")
-    window.alert("hello")
-
     // Submit login form
     fetch("http://localhost:3000/auth/login", {
       method: "POST",

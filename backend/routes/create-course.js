@@ -3,33 +3,39 @@ const routes = express.Router();
 const verifyJWT = require("../middleware/verifyJWT");
 const db = require("../dbConnection");
 const multer = require("multer");
+const path = require("path")
 
 // Define the storage for file uploads
 const storage = multer.diskStorage({
-  destination: (req, file, cb) => {
-    cb(null, "uploads"); // Save files to the 'uploads' folder
+  destination: function (req, file, cb) {
+    cb(null, path.join(__dirname, "../uploads/course_data"));
   },
-  filename: (req, file, cb) => {
-    cb(null, file.originalname); // Use the original file name
+  filename: function (req, file, cb) {
+    const randomString = Date.now() + "-" + Math.round(Math.random() * 1e9);
+    const fileExtension = path.extname(file.originalname);
+    cb(null, `${randomString}${fileExtension}`);
   },
 });
 
 // Create the middleware to handle file uploads
 const upload = multer({
   storage: storage,
-  limits: { fileSize: 1024 * 1024 * 5 }, // 5 MB file size limit
-}).fields([{ name: "course_img" }, { name: "course_video" }]);
+  limits: { fileSize: 1024 * 1024 * 10 }, // 10 MB file size limit
+}).fields([
+  { name: "course_img", maxCount: 1 },
+  { name: "course_video", maxCount: 1 },
+]);
 
 routes.post("/", verifyJWT, (req, res) => {
   upload(req, res, (err) => {
     if (err instanceof multer.MulterError) {
       // A Multer error occurred when uploading.
       console.log(err);
-      res.status(400).json({ error: "File size limit exceeded" });
+      res.status(400).json({ error: "File size limit exceeded", errorMessage: err });
     } else if (err) {
       // An unknown error occurred when uploading.
       console.log(err);
-      res.status(500).json({ error: "Error uploading file" });
+      res.status(500).json({ error: "Error uploading file", errorMessage: err });
     } else {
       // No error occurred.
       // Extract the data from the request body
@@ -64,6 +70,7 @@ routes.post("/", verifyJWT, (req, res) => {
         course_keywords,
       ];
 
+      console.log(values);
       // Execute the SQL query
       db.query(qry, values, (err, result) => {
         if (err) {
